@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Website Footer</title>
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer Main */
+.footer{
+    background:#111;
+    color:#fff;
+    padding:40px 20px;
+}
+
+.footer-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:30px;
+}
+
+/* Sections */
+.footer-section{
+    flex:1;
+    min-width:250px;
+}
+
+.footer h3{
+    border-bottom:2px solid #00adb5;
+    display:inline-block;
+    padding-bottom:5px;
+    margin-bottom:15px;
+}
+
+.footer a{
+    color:#00adb5;
+    text-decoration:none;
+}
+.footer a:hover{
+    text-decoration:underline;
+}
+
+/* Contact Form */
+.footer input, .footer textarea{
+    width:100%;
+    padding:8px;
+    margin:6px 0;
+    border:none;
+    border-radius:4px;
+}
+
+.footer button{
+    background:#00adb5;
+    color:#fff;
+    border:none;
+    padding:10px 15px;
+    cursor:pointer;
+    border-radius:5px;
+}
+.footer button:hover{
+    background:#01969c;
+}
+
+/* Reviews */
+.review{
+    background:#1c1c1c;
+    padding:10px;
+    border-radius:5px;
+    margin-bottom:10px;
+}
+
+.stars{
+    color:gold;
+    font-size:18px;
+}
+
+/* Bottom Bar */
+.footer-bottom{
+    text-align:center;
+    margin-top:30px;
+    border-top:1px solid #333;
+    padding-top:15px;
+    font-size:14px;
+    color:#aaa;
+}
+</style>
+</head>
+<body>
+
+<footer class="footer">
+<div class="footer-container">
+
+    <!-- About Admin -->
+    <div class="footer-section">
+        <h3>About Admin</h3>
+        <p><strong>Name:</strong> Shivam Agarwal</p>
+        <p><strong>Role:</strong> Website Developer & Admin</p>
+        <p>I design and maintain this website. Feel free to contact me for suggestions or queries.</p>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section">
+        <h3>Contact Info</h3>
+        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        <p>Phone: +91 XXXXX XXXXX</p>
+        <p>Location: India</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="footer-section">
+        <h3>Contact Me</h3>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="3" placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Reviews -->
+    <div class="footer-section">
+        <h3>User Reviews</h3>
+
+        <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>Great website and very helpful admin!</p>
+        </div>
+
+        <div class="review">
+            <div class="stars">★★★★☆</div>
+            <p>Easy to use and quick support response.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 YourWebsite | Designed by Shivam Agarwal
+</div>
+</footer>
+
+</body>
+</html>
