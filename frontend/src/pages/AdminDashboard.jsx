@@ -31,7 +31,7 @@ export default function AdminDashboard() {
 
   const loadPlaces = async () => {
     try {
-      const res = await api.get("/places");
+      const res = await api.get("/api/places");
       setPlaces(Array.isArray(res.data) ? res.data : []);
     } catch (e) {
       console.error(e);
@@ -65,10 +65,10 @@ export default function AdminDashboard() {
 
     try {
       if (editId) {
-        await api.put(`/places/${editId}`, payload);
+        await api.put(`/api/places/${editId}`, payload);
         alert("✅ Place Updated!");
       } else {
-        await api.post("/places", payload);
+        await api.post("/api/places", payload);
         alert("✅ Place Added!");
       }
 
@@ -97,7 +97,7 @@ export default function AdminDashboard() {
 
   const handleDelete = async (id) => {
     if (!confirm("Delete this place?")) return;
-    await api.delete(`/places/${id}`);
+    await api.delete(`/api/places/${id}`);
     alert("✅ Deleted!");
     loadPlaces();
   };
