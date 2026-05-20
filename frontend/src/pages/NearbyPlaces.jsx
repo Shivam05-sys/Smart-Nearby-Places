@@ -7,7 +7,7 @@ export default function NearbyPlaces() {
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((pos) => {
       api
-        .get(`/places?lat=${pos.coords.latitude}&lng=${pos.coords.longitude}&maxKm=25`)
+        .get(`/api/places?lat=${pos.coords.latitude}&lng=${pos.coords.longitude}&maxKm=25`)
         .then((res) => setPlaces(res.data));
     });
   }, []);
