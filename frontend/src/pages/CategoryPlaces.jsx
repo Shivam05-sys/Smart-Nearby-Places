@@ -16,7 +16,7 @@ export default function CategoryPlaces() {
       setErr("");
 
       const res = await api.get(
-        `/places?category=${category}&search=${encodeURIComponent(search)}`
+        `/api/places?category=${category}&search=${encodeURIComponent(search)}`
       );
 
       setPlaces(Array.isArray(res.data) ? res.data : []);
