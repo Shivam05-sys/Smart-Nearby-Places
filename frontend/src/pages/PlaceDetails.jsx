@@ -11,7 +11,7 @@ export default function PlaceDetails() {
   const [distance, setDistance] = useState(null);
 
   const loadDetails = async () => {
-    const res = await api.get(`/places/${id}`);
+    const res = await api.get(`/api/places/${id}`);
     setData(res.data);
 
     // ✅ calculate distance if user location + place coordinates exist
@@ -23,7 +23,7 @@ export default function PlaceDetails() {
             const { latitude, longitude } = pos.coords;
             // ask backend to calculate distance via list endpoint
             const resp = await api.get(
-              `/places?lat=${latitude}&lng=${longitude}&search=${encodeURIComponent(
+              `/api/places?lat=${latitude}&lng=${longitude}&search=${encodeURIComponent(
                 place.name
               )}`
             );
