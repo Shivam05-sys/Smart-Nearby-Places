@@ -46,7 +46,7 @@ export default function CategoryPlaces() {
       <div className="p-10 text-center">
         <p className="text-red-600 font-bold text-lg">❌ {err}</p>
         <p className="text-slate-500 mt-2">
-          Check backend is running on <b>localhost:5000</b>
+          Check backend is running on <b>https://smart-nearby-places-axh0.onrender.com</b>
         </p>
       </div>
     );
